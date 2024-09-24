@@ -3,7 +3,7 @@ import Main from "./Main";
 
 const Body = () => {
   return (
-    <div className="bg-[#f0f0f0]">
+    <div>
       <Header />
       <Main />
     </div>

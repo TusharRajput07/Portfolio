@@ -1,33 +1,49 @@
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import { useState } from "react";
 
 const Header = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.documentElement.classList.toggle("dark");
+  };
+
   return (
-    <div className="flex justify-between py-4 px-32 text-[#5f5e5e] bg-white">
-      <div className="flex items-center relative cursor-pointer">
-        <span className="text-5xl font-extrabold text-black">T</span>
-        <span className="text-7xl font-serif text-[#c4c4c4] absolute -top-2 left-2">
-          R
-        </span>
+    <header className="sticky top-0 bg-[#f0f0f0] dark:bg-[#101826] bg-gradient-to-b from-[#cfcece] dark:from-[#151515]">
+      <div className="flex justify-between items-center py-2 px-8 md:px-16 text-gray-600 dark:text-gray-300">
+        {/* Logo Section */}
+        <div className="text-sm md:text-base font-medium">Tushar Rajput</div>
+
+        {/* Navigation Links */}
+        <nav className="flex items-center space-x-4 md:space-x-8 text-xs md:text-sm font-bold">
+          <div className="hover:text-black py-2 border-b-[6px] border-transparent hover:border-[#56B4AC] cursor-pointer transition-all duration-300 ease-in-out dark:hover:text-white">
+            Home
+          </div>
+          <div className="hover:text-black py-2 border-b-[6px] border-transparent hover:border-[#56B4AC] cursor-pointer transition-all duration-300 ease-in-out dark:hover:text-white">
+            About
+          </div>
+          <div className="hover:text-black py-2 border-b-[6px] border-transparent hover:border-[#56B4AC] cursor-pointer transition-all duration-300 ease-in-out dark:hover:text-white">
+            Projects
+          </div>
+          <div className="hover:text-black py-2 border-b-[6px] border-transparent hover:border-[#56B4AC] cursor-pointer transition-all duration-300 ease-in-out dark:hover:text-white">
+            Skills
+          </div>
+          <div className="hover:text-black py-2 border-b-[6px] border-transparent hover:border-[#56B4AC] cursor-pointer transition-all duration-300 ease-in-out dark:hover:text-white">
+            Contact
+          </div>
+
+          {/* Dark Mode Toggle */}
+          <button
+            aria-label="Toggle Dark Mode"
+            className="hover:text-[#56B4AC] pb-1 transition duration-300 focus:outline-none dark:text-[#56B4AC]"
+            onClick={toggleDarkMode}
+          >
+            <DarkModeIcon />
+          </button>
+        </nav>
       </div>
-      <div className="flex gap-10 text-base font-semibold">
-        <div className=" cursor-pointer text-[#5f5e5e] hover:text-black">
-          Home
-        </div>
-        <div className=" cursor-pointer text-[#5f5e5e] hover:text-black">
-          About
-        </div>
-        <div className=" cursor-pointer text-[#5f5e5e] hover:text-black">
-          Projects
-        </div>
-        <div className=" cursor-pointer text-[#5f5e5e] hover:text-black">
-          Skills
-        </div>
-        <div className=" cursor-pointer text-[#5f5e5e] hover:text-black">
-          Contact
-        </div>
-        <DarkModeIcon />
-      </div>
-    </div>
+    </header>
   );
 };
 

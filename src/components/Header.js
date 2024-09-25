@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 bg-[#f0f0f0] dark:bg-[#101826] bg-gradient-to-b from-[#cfcece] dark:from-[#151515]">
+    <header className="fixed w-full top-0 bg-[#f0f0f0] dark:bg-[#101826] bg-gradient-to-b from-[#cfcece] dark:from-[#151515]">
       <div className="flex justify-between items-center py-2 px-8 md:px-16 text-gray-600 dark:text-gray-300">
         {/* Logo Section */}
         <div className="text-sm md:text-base font-medium">Tushar Rajput</div>

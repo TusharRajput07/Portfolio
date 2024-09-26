@@ -16,7 +16,7 @@ const Skills = () => {
   return (
     <div className="py-16 px-32 bg-[#f0f0f0] dark:bg-[#101826] text-[#404040] dark:text-gray-400">
       {/* heading */}
-      <div className="mb-8 text-center">
+      <div className="mb-10 text-center">
         <div className="text-4xl mb-2 font-bold text-[#404040] dark:text-transparent dark:bg-gradient-to-r dark:from-[#56B4AC] dark:to-[#a34b74] dark:bg-clip-text dark:animate-gradient">
           Skills
         </div>

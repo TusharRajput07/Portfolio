@@ -5,19 +5,19 @@ const SkillCard = ({ skill, level, Logo, color, percent }) => {
   const barWidth = isHovered ? 0 : percent;
 
   return (
-    <div className="h-fit w-full border border-gray-300 dark:border-gray-600 cursor-pointer shadow-lg rounded-xl mb-6 text-[#404040] dark:text-gray-400">
+    <div className="h-fit w-full border border-gray-300 dark:border-gray-600 cursor-pointer shadow-lg rounded-xl mb-3 md:mb-6 text-[#404040] dark:text-gray-400">
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="py-2 px-3 hover:scale-[95%] transition-all duration-150 ease-in-out hover"
+        className="py-1 md:py-2 px-2 md:px-3 hover:scale-[95%] transition-all duration-150 ease-in-out hover"
       >
         <div className="flex justify-between items-center">
           <div>
-            <div className="text-lg font-bold">{skill}</div>
-            <div className="text-sm font-light">{level}</div>
+            <div className="text-sm md:text-lg font-bold">{skill}</div>
+            <div className="text-xs md:text-sm font-light">{level}</div>
           </div>
           <div>
-            <Logo className="w-8 h-8" />
+            <Logo className="w-6 md:w-8 h-6 md:h-8" />
           </div>
         </div>
 

@@ -11,10 +11,57 @@ import { ReactComponent as GITsvg } from "../assets/git.svg";
 import { ReactComponent as MUIsvg } from "../assets/mui.svg";
 import { ReactComponent as VSsvg } from "../assets/vs.svg";
 import { ReactComponent as REDUXsvg } from "../assets/redux.svg";
+import { useEffect, useRef, useState } from "react";
 
-const Skills = () => {
+const Skills = ({ setActiveSection }) => {
+  const sectionRef = useRef(null);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const divPosition = document.getElementById("animatedDiv").offsetTop;
+
+    // Check if the scroll position is at the middle of the screen
+    if (scrollPosition >= divPosition + 200) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActiveSection("skills");
+        }
+      },
+      { threshold: 0.5 } // 50% of the section needs to be visible
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [setActiveSection]);
+
   return (
-    <div className="py-16 px-32 bg-[#f0f0f0] dark:bg-[#101826] text-[#404040] dark:text-gray-400">
+    <div
+      ref={sectionRef}
+      id="skills"
+      className="pt-10 md:pt-20 px-6 md:px-32 bg-[#f0f0f0] dark:bg-[#101826] text-[#404040] dark:text-gray-400"
+    >
       {/* heading */}
       <div className="mb-10 text-center">
         <div className="text-4xl mb-2 font-bold text-[#404040] dark:text-transparent dark:bg-gradient-to-r dark:from-[#56B4AC] dark:to-[#a34b74] dark:bg-clip-text dark:animate-gradient">
@@ -22,9 +69,14 @@ const Skills = () => {
         </div>
         <div className="text-xs">My technical level</div>
       </div>
-      <div className="flex">
+      <div
+        id="animatedDiv"
+        className={`flex flex-wrap transition-all duration-700 ease-in-out ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         {/* first container */}
-        <div className="h-96 w-1/4 p-3">
+        <div className="w-1/2 md:w-1/4 px-1 md:px-0 md:p-3">
           <SkillCard
             skill="React"
             level="Intermediate"
@@ -48,7 +100,7 @@ const Skills = () => {
           />
         </div>
         {/* second container */}
-        <div className="h-96 w-1/4 p-3">
+        <div className="w-1/2 md:w-1/4 px-1 md:px-0 md:p-3">
           <SkillCard
             skill="Javascript"
             level="Intermediate"
@@ -74,7 +126,7 @@ const Skills = () => {
 
         {/* third container */}
 
-        <div className="h-96 w-1/4 p-3">
+        <div className="w-1/2 md:w-1/4 px-1 md:px-0 md:p-3">
           <SkillCard
             skill="Material UI"
             level="Intermediate"
@@ -100,7 +152,7 @@ const Skills = () => {
         </div>
 
         {/* fourth container */}
-        <div className="h-96 w-1/4 p-3">
+        <div className="w-1/2 md:w-1/4 px-1 md:px-0 md:p-3">
           <SkillCard
             skill="C++"
             level="Intermediate"

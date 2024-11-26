@@ -1,17 +1,56 @@
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EastIcon from "@mui/icons-material/East";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import SendIcon from "@mui/icons-material/Send";
-import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
 
-const Contact = () => {
+const Contact = ({ setActiveSection }) => {
+  const sectionRef = useRef(null);
   const [open, setOpen] = useState(false);
   const [emailjsMessage, setEmailjsMessage] = useState(null);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + window.innerHeight; // how much you have come down
+    const divPosition = document.getElementById("contactDiv").offsetTop; // where the div starts (eg. 2000px)
+
+    // check if the amount you have come down is more than the position where the div starts
+    if (scrollPosition >= divPosition + 200) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActiveSection("contact");
+        }
+      },
+      { threshold: 0.5 } // 50% of the section needs to be visible
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [setActiveSection]);
 
   const handleClose = (event, reason) => {
     setOpen(false);
@@ -55,6 +94,9 @@ const Contact = () => {
       return;
     }
 
+    setEmailjsMessage("Sending...");
+    setOpen(true);
+
     emailjs
       .sendForm(
         "service_vrjh3yb",
@@ -96,18 +138,27 @@ const Contact = () => {
   };
 
   return (
-    <div className="px-40 py-20 bg-[#f0f0f0] dark:bg-[#101826] text-[#404040] dark:text-gray-300">
+    <div
+      ref={sectionRef}
+      id="contact"
+      className="px-10 md:px-40 py-20 bg-[#f0f0f0] dark:bg-[#101826] text-[#404040] dark:text-gray-300"
+    >
       {/* heading */}
-      <div className="mb-10 text-center">
+      <div className="mb-5 md:mb-10 text-center">
         <div className="text-4xl mb-2 font-bold text-[#404040] dark:text-transparent dark:bg-gradient-to-r dark:from-[#56B4AC] dark:to-[#a34b74] dark:bg-clip-text dark:animate-gradient">
           Contact Me
         </div>
         <div className="text-xs">Get in touch</div>
       </div>
       {/* containers */}
-      <div className="flex">
+      <div
+        id="contactDiv"
+        className={`md:flex transition-all duration-700 ease-in-out ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         {/* left container */}
-        <div className="w-1/2 text-center flex flex-col items-center gap-4">
+        <div className="w-full md:w-1/2 text-center flex flex-col items-center gap-4">
           <div className="text-xl font-semibold">Talk to me</div>
           {/* cards */}
           <div
@@ -140,22 +191,24 @@ const Contact = () => {
               <ArrowRightAltIcon fontSize="small" />
             </span>
           </div>
-          <div className="w-60 h-fit p-2 flex flex-col justify-center items-center border border-gray-300 rounded-lg shadow-md hover:shadow-lg dark:border-gray-600 cursor-pointer">
-            <span>
-              <LinkedInIcon />
-            </span>
-            <span className="text-base font-bold">LinkedIn</span>
-            <span className="text-sm font-light">
-              www.linkedin.com/in/tusharrajput71
-            </span>
-            <span className="text-sm font-light my-2">
-              Write me
-              <ArrowRightAltIcon fontSize="small" />
-            </span>
-          </div>
+          <a href="https://www.linkedin.com/in/tusharrajput71/" target="_blank">
+            <div className="w-60 h-fit p-2 flex flex-col justify-center items-center border border-gray-300 rounded-lg shadow-md hover:shadow-lg dark:border-gray-600 cursor-pointer">
+              <span>
+                <LinkedInIcon />
+              </span>
+              <span className="text-base font-bold">LinkedIn</span>
+              <span className="text-sm font-light">
+                www.linkedin.com/in/tusharrajput71
+              </span>
+              <span className="text-sm font-light my-2">
+                Write me
+                <ArrowRightAltIcon fontSize="small" />
+              </span>
+            </div>
+          </a>
         </div>
         {/* right container */}
-        <div className="w-1/2 flex flex-col items-center gap-4">
+        <div className="w-full md:w-1/2 flex flex-col mt-10 md:mt-0 items-center gap-4">
           <div className="text-xl font-semibold">Write me a mail</div>
           <form ref={form} onSubmit={sendEmail} className="w-full">
             <div className="w-full relative">
@@ -200,7 +253,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="bg-[#404040] text-white text-lg mx-auto w-full rounded-lg cursor-pointer hover:shadow-lg dark:bg-gradient-to-r  dark:from-[#56B4AC] dark:to-[#7728a4] dark:text-white dark:animate-gradient"
+              className="bg-[#404040] text-white text-sm md:text-lg mx-auto w-full rounded-lg cursor-pointer hover:shadow-lg dark:bg-gradient-to-r  dark:from-[#56B4AC] dark:to-[#7728a4] dark:text-white dark:animate-gradient"
             >
               <div className="px-3 py-4 flex justify-center items-center hover:scale-[90%] transition-all duration-150 ease-in-out">
                 Send Message
@@ -216,7 +269,13 @@ const Contact = () => {
         autoHideDuration={6000}
         onClose={handleClose}
         message={emailjsMessage}
-        // action={action}
+        ContentProps={{
+          style: {
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          },
+        }}
       />
     </div>
   );

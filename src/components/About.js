@@ -113,7 +113,7 @@ const About = ({ setActiveSection }) => {
             MongoDB to broaden my expertise in backend technologies.
           </div>
 
-          <a href="/CV.pdf" download="Tushar_Rajput_CV.pdf">
+          <a href="/cvResume.pdf" download="Tushar_Rajput_CV.pdf">
             <div className="bg-[#404040] text-white text-lg mx-auto mt-2 md:mt-5 w-fit rounded-lg cursor-pointer hover:shadow-lg dark:bg-gradient-to-r  dark:from-[#56B4AC] dark:to-[#7728a4] dark:text-white dark:animate-gradient">
               <div className="px-3 py-2 flex justify-center items-center hover:scale-[90%] transition-all duration-150 ease-in-out">
                 Download CV

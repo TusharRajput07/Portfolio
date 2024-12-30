@@ -37,7 +37,7 @@ const Footer = () => {
       <div className="text-xs my-1">rajputtushar7102@gmail.com</div>
       <div className="text-xs mb-4">+91-964-341-8942</div>
 
-      <a href="/CV.pdf" download="Tushar_Rajput_CV.pdf">
+      <a href="/cvResume.pdf" download="Tushar_Rajput_CV.pdf">
         <div className="bg-[#5a5959] text-white text-sm mx-auto mt-2  w-fit rounded-lg cursor-pointer hover:shadow-lg dark:bg-gradient-to-r  dark:from-[#56B4AC] dark:to-[#7728a4] dark:text-white dark:animate-gradient">
           <div className="px-3 py-2 flex justify-center items-center hover:scale-[90%] transition-all duration-150 ease-in-out">
             Download CV

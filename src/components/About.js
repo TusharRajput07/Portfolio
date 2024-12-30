@@ -89,7 +89,7 @@ const About = ({ setActiveSection }) => {
                 <CasesOutlinedIcon />
               </span>
               <span className="text-sm md:text-base font-bold">Completed</span>
-              <span className="text-xs md:text-sm font-light">5+ projects</span>
+              <span className="text-xs md:text-sm font-light">4+ projects</span>
             </div>
             <a href="https://leetcode.com/u/Tusharr_Rajput/" target="_blank">
               <div className="w-24 md:w-36 h-24 md:h-28 p-2 flex flex-col justify-center items-center border border-gray-300 rounded-lg shadow-md hover:shadow-lg dark:border-gray-600 cursor-pointer">
@@ -105,18 +105,22 @@ const About = ({ setActiveSection }) => {
           </div>
 
           <div className="text-sm text-gray-600 font-semibold py-5 dark:text-gray-500">
-            A Front-End Developer skilled in React and Tailwind CSS specializes
-            in building responsive, dynamic, and visually appealing web
-            applications. They leverage React's component-based architecture for
-            efficient UI development and state management, while using Tailwind
-            CSS for fast, utility-first styling.
+            I'm Tushar, a 4th-year B.Tech CSE student and a Full Stack Developer
+            with a strong focus on frontend technologies and a budding passion
+            for backend development. Proficient in React and Tailwind CSS, I
+            specialize in crafting responsive, dynamic, and visually engaging
+            web applications. Currently, I'm exploring Node.js, Express.js, and
+            MongoDB to broaden my expertise in backend technologies.
           </div>
-          <div className="bg-[#404040] text-white text-lg mx-auto mt-2 md:mt-5 w-fit rounded-lg cursor-pointer hover:shadow-lg dark:bg-gradient-to-r  dark:from-[#56B4AC] dark:to-[#7728a4] dark:text-white dark:animate-gradient">
-            <div className="px-3 py-2 flex justify-center items-center hover:scale-[90%] transition-all duration-150 ease-in-out">
-              Download CV
-              <DescriptionOutlinedIcon className="ml-1" fontSize="small" />
+
+          <a href="/CV.pdf" download="Tushar_Rajput_CV.pdf">
+            <div className="bg-[#404040] text-white text-lg mx-auto mt-2 md:mt-5 w-fit rounded-lg cursor-pointer hover:shadow-lg dark:bg-gradient-to-r  dark:from-[#56B4AC] dark:to-[#7728a4] dark:text-white dark:animate-gradient">
+              <div className="px-3 py-2 flex justify-center items-center hover:scale-[90%] transition-all duration-150 ease-in-out">
+                Download CV
+                <DescriptionOutlinedIcon className="ml-1" fontSize="small" />
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 

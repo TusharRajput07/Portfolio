@@ -1,18 +1,25 @@
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = ({ activeSection }) => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-    document.documentElement.classList.toggle("dark");
   };
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     element.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
   return (
     <header className="fixed w-full z-20 top-0 bg-[#f0f0f0] dark:bg-[#101826] bg-gradient-to-b from-[#cfcece] dark:from-[#151515]">

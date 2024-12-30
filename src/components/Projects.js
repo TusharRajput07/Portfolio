@@ -77,6 +77,7 @@ const Projects = ({ setActiveSection }) => {
           overview="Netflix Gemini is a Netflix clone with Gemini Ai features for search and movie recommendations"
           tech="React.js | Firebase Auth | Firebase Firestore | Redux | Tailwind CSS | TMDB APIs | Gemini APIs"
           overview2="Netflix Gemini is a Netflix clone app developed using React.js, seamlessly integrating TMDB APIs to provide a rich catalog of movies and TV shows. Netflix Gemini uses Google Firebase to ensure secure and reliable user authentication and authorization. It also uses Firebase Firestore as a database. It provides enhanced user experience by features such as the ability to save movies to a watch later list and track liked movies. It uses Gemini APIs for movies and TV shows search functionality and recommended movies based on user's watchList. Netflix Gemini provides a responsive design using Tailwind CSS."
+          launch="https://netflix-gemini-eight.vercel.app/"
         />
         <ProjectCard
           name="BiteXpress"
@@ -86,6 +87,7 @@ const Projects = ({ setActiveSection }) => {
           overview2={
             "BiteXpress is an online food ordering app that allows users to explore nearby restaurants, easily add items to their cart, and view a detailed billing summary on the Cart page. It integrates Swiggy APIs to dynamically fetch and display restaurant and menu data in real-time, ensuring up-to-date information. The app uses Redux for efficient state management and leverages Parcel for bundling, enhancing performance and reducing load times. BiteXpress also features a fully responsive design, built with CSS, to deliver a smooth and consistent user experience across various devices."
           }
+          launch="https://bite-xpress.vercel.app/"
         />
         <ProjectCard
           name="Portfolio"
@@ -95,14 +97,19 @@ const Projects = ({ setActiveSection }) => {
           overview2="This portfolio showcases a minimalistic and modern design, developed using React for dynamic functionality and Tailwind CSS for efficient, responsive styling. The focus is on simplicity and elegance, with key sections like About, Projects, Skills, and Contact highlighted through clean layouts. Subtle animations and transitions enhance navigation and interactivity, while dark mode support ensures a seamless user experience across devices. The design emphasizes usability and accessibility, reflecting both technical expertise and aesthetic considerations."
         />
         <ProjectCard
-          name="Premier League UI"
-          screenshot={PL_SS}
-          overview="A simple non functioning UI of Premier League website. This is the first project I made"
-        />
-        <ProjectCard
           name="Rock Paper Scissors"
           screenshot={RPS_SS}
           overview="A simple rock paper scirrors game where the score gets tracked in local storage"
+          launch="https://rock-paper-scissors-coral-theta-48.vercel.app/rpswithDOM.html"
+          tech="HTML | CSS | Javascript"
+          overview2="Rock Paper Scissors is a web-based game I created using HTML, CSS, and JavaScript as an early project in my web development journey. It features a sleek UI with responsive buttons, smooth transitions, and a dynamic score tracker. Scores are stored in the browser’s local storage, allowing players to retain progress between sessions. This project combines simplicity, functionality, and engaging design."
+        />
+        <ProjectCard
+          name="Premier League UI"
+          screenshot={PL_SS}
+          overview="A simple non functioning UI of Premier League website. This is the first project I made"
+          tech="HTML | CSS | Javascript"
+          overview2="My first project was a simple, non-functional UI replica of the Premier League website. Built to practice HTML and CSS, this project focused on recreating the visual design and layout of the original site."
         />
       </div>
     </div>

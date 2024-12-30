@@ -69,6 +69,7 @@ const Skills = ({ setActiveSection }) => {
         </div>
         <div className="text-xs">My technical level</div>
       </div>
+
       <div
         id="animatedDiv"
         className={`flex flex-wrap transition-all duration-700 ease-in-out ${
@@ -76,7 +77,7 @@ const Skills = ({ setActiveSection }) => {
         }`}
       >
         {/* first container */}
-        <div className="w-1/2 md:w-1/4 px-1 md:px-0 md:p-3">
+        <div className="w-1/2 md:w-1/4 px-1 md:p-3">
           <SkillCard
             skill="React"
             level="Intermediate"
@@ -100,7 +101,7 @@ const Skills = ({ setActiveSection }) => {
           />
         </div>
         {/* second container */}
-        <div className="w-1/2 md:w-1/4 px-1 md:px-0 md:p-3">
+        <div className="w-1/2 md:w-1/4 px-1 md:p-3">
           <SkillCard
             skill="Javascript"
             level="Intermediate"
@@ -126,7 +127,7 @@ const Skills = ({ setActiveSection }) => {
 
         {/* third container */}
 
-        <div className="w-1/2 md:w-1/4 px-1 md:px-0 md:p-3">
+        <div className="w-1/2 md:w-1/4 px-1 md:p-3">
           <SkillCard
             skill="Material UI"
             level="Intermediate"
@@ -152,7 +153,7 @@ const Skills = ({ setActiveSection }) => {
         </div>
 
         {/* fourth container */}
-        <div className="w-1/2 md:w-1/4 px-1 md:px-0 md:p-3">
+        <div className="w-1/2 md:w-1/4 px-1 md:p-3">
           <SkillCard
             skill="C++"
             level="Intermediate"

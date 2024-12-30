@@ -71,8 +71,8 @@ const Home = ({ setActiveSection }) => {
           <div className="text-[#404040] leading-normal md:leading-normal md:mb-5 text-3xl md:text-5xl font-extrabold dark:bg-gradient-to-r  dark:from-[#56B4AC] dark:to-[#8b747f] dark:text-transparent dark:bg-clip-text dark:animate-gradient">
             Tushar Rajput
           </div>
-          <div className="mb-4 md:my-4">full stack developer</div>
-          <div className="text-sm font-light">
+          <div className="mb-4 md:my-4">Full stack developer</div>
+          <div className="text-sm font-light dark:text-gray-400">
             A Full Stack Developer with a strong focus on UI development,
             skilled in both front-end and back-end technologies, creating
             visually appealing and user-friendly interfaces.

@@ -36,12 +36,15 @@ const Footer = () => {
       <div className="text-3xl md:text-4xl font-bold">Tushar Rajput</div>
       <div className="text-xs my-1">rajputtushar7102@gmail.com</div>
       <div className="text-xs mb-4">+91-964-341-8942</div>
-      <div className="bg-[#5a5959] text-white text-sm mx-auto mt-2  w-fit rounded-lg cursor-pointer hover:shadow-lg dark:bg-gradient-to-r  dark:from-[#56B4AC] dark:to-[#7728a4] dark:text-white dark:animate-gradient">
-        <div className="px-3 py-2 flex justify-center items-center hover:scale-[90%] transition-all duration-150 ease-in-out">
-          Download CV
-          <DescriptionOutlinedIcon className="ml-1" fontSize="small" />
+
+      <a href="/CV.pdf" download="Tushar_Rajput_CV.pdf">
+        <div className="bg-[#5a5959] text-white text-sm mx-auto mt-2  w-fit rounded-lg cursor-pointer hover:shadow-lg dark:bg-gradient-to-r  dark:from-[#56B4AC] dark:to-[#7728a4] dark:text-white dark:animate-gradient">
+          <div className="px-3 py-2 flex justify-center items-center hover:scale-[90%] transition-all duration-150 ease-in-out">
+            Download CV
+            <DescriptionOutlinedIcon className="ml-1" fontSize="small" />
+          </div>
         </div>
-      </div>
+      </a>
 
       <div className="md:flex w-full mb-5">
         {/* left container */}
@@ -87,31 +90,31 @@ const Footer = () => {
           <div className="text-xl font-bold mb-1 md:mb-2">Navigations</div>
           <div className="flex justify-center items-center gap-4 md:gap-6">
             <span
-              // onClick={scrollToSection("home")}
+              onClick={() => scrollToSection("home")}
               className="dark:hover:text-[#56B4AC] cursor-pointer"
             >
               Home
             </span>
             <span
-              // onClick={scrollToSection("about")}
+              onClick={() => scrollToSection("about")}
               className="dark:hover:text-[#56B4AC] cursor-pointer"
             >
               About
             </span>
             <span
-              // onClick={scrollToSection("projects")}
+              onClick={() => scrollToSection("projects")}
               className="dark:hover:text-[#56B4AC] cursor-pointer"
             >
               Projects
             </span>
             <span
-              // onClick={scrollToSection("skills")}
+              onClick={() => scrollToSection("skills")}
               className="dark:hover:text-[#56B4AC] cursor-pointer"
             >
               Skills
             </span>
             <span
-              // onClick={scrollToSection("contact")}
+              onClick={() => scrollToSection("contact")}
               className="dark:hover:text-[#56B4AC] cursor-pointer"
             >
               Contact

@@ -78,7 +78,7 @@ const Projects = ({ setActiveSection }) => {
           overview="Netflix Gemini is a Netflix clone with Gemini Ai features for search and movie recommendations"
           tech="React.js | Firebase Auth | Firebase Firestore | Redux | Tailwind CSS | TMDB APIs | Gemini APIs"
           overview2="Netflix Gemini is a Netflix clone app developed using React.js, seamlessly integrating TMDB APIs to provide a rich catalog of movies and TV shows. Netflix Gemini uses Google Firebase to ensure secure and reliable user authentication and authorization. It also uses Firebase Firestore as a database. It provides enhanced user experience by features such as the ability to save movies to a watch later list and track liked movies. It uses Gemini APIs for movies and TV shows search functionality and recommended movies based on user's watchList. Netflix Gemini provides a responsive design using Tailwind CSS."
-          launch="https://netflix-gemini-eight.vercel.app/"
+          launch="https://netflix-gemini-psi.vercel.app/"
         />
 
         <ProjectCard

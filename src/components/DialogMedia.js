@@ -14,7 +14,8 @@ const DialogMedia = ({
   handleClose,
   name,
   screenshot,
-  tech,
+  location,
+  duration,
   overview2,
 }) => {
   //   const theme = useTheme();
@@ -44,10 +45,16 @@ const DialogMedia = ({
             <div className="text-3xl md:text-4xl leading-normal md:leading-snug font-bold dark:text-transparent dark:bg-gradient-to-r dark:from-[#56B4AC] dark:to-[#a34b74] dark:bg-clip-text dark:animate-gradient py-2 md:py-0">
               {name}
             </div>
-            <div className="text-lg md:text-xl font-bold md:mb-1 mt-auto">
-              Tech Stack
+            <div>
+              <div className="text-lg md:text-xl font-bold md:mb-1 mt-auto">
+                Location
+              </div>
+              <div className="text-sm md:mb-2 font-normal">{location}</div>
+              <div className="text-lg md:text-xl font-bold md:mb-1 mt-auto">
+                Duration
+              </div>
+              <div className="text-sm md:mb-2 font-normal">{duration}</div>
             </div>
-            <div className="text-sm md:mb-2 font-normal">{tech}</div>
           </div>
         </div>
         {/* info */}

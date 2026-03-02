@@ -7,10 +7,10 @@ import { ReactComponent as TAILWINDsvg } from "../assets/tailwind.svg";
 import { ReactComponent as NODEsvg } from "../assets/node.svg";
 import { ReactComponent as FIREBASEsvg } from "../assets/firebase.svg";
 import { ReactComponent as CPPsvg } from "../assets/cpp.svg";
-import { ReactComponent as GITsvg } from "../assets/git.svg";
-import { ReactComponent as MUIsvg } from "../assets/mui.svg";
-import { ReactComponent as VSsvg } from "../assets/vs.svg";
+import { ReactComponent as MONGODBsvg } from "../assets/mongodb.svg";
+import { ReactComponent as POSTGRESsvg } from "../assets/Postgres.svg";
 import { ReactComponent as REDUXsvg } from "../assets/redux.svg";
+import { ReactComponent as EXPRESSsvg } from "../assets/expressjs.svg";
 import { useEffect, useRef, useState } from "react";
 
 const Skills = ({ setActiveSection }) => {
@@ -44,7 +44,7 @@ const Skills = ({ setActiveSection }) => {
           setActiveSection("skills");
         }
       },
-      { threshold: 0.5 } // 50% of the section needs to be visible
+      { threshold: 0.5 }, // 50% of the section needs to be visible
     );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -80,10 +80,10 @@ const Skills = ({ setActiveSection }) => {
         <div className="w-1/2 md:w-1/4 px-1 md:p-3">
           <SkillCard
             skill="React"
-            level="Intermediate"
+            level="Advanced"
             Logo={REACTsvg}
             color="#087EA4"
-            percent="70"
+            percent="90"
           />
           <SkillCard
             skill="Redux"
@@ -129,10 +129,10 @@ const Skills = ({ setActiveSection }) => {
 
         <div className="w-1/2 md:w-1/4 px-1 md:p-3">
           <SkillCard
-            skill="Material UI"
+            skill="MongoDB"
             level="Intermediate"
-            Logo={MUIsvg}
-            color="#0081CB"
+            Logo={MONGODBsvg}
+            color="#13AA52"
             percent="60"
           />
           <SkillCard
@@ -144,10 +144,10 @@ const Skills = ({ setActiveSection }) => {
           />
 
           <SkillCard
-            skill="Git"
+            skill="Express"
             level="Intermediate"
-            Logo={GITsvg}
-            color="#F05133"
+            Logo={EXPRESSsvg}
+            color="#393939"
             percent="60"
           />
         </div>
@@ -163,17 +163,17 @@ const Skills = ({ setActiveSection }) => {
           />
           <SkillCard
             skill="Node JS"
-            level="Basic"
+            level="Intermediate"
             Logo={NODEsvg}
             color="#689F63"
-            percent="30"
+            percent="70"
           />
           <SkillCard
-            skill="VS Code"
-            level="Intermediate"
-            Logo={VSsvg}
-            color="#087EA4"
-            percent="70"
+            skill="PostgreSQL"
+            level="Basic"
+            Logo={POSTGRESsvg}
+            color="#336791"
+            percent="40"
           />
         </div>
       </div>

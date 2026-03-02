@@ -1,4 +1,4 @@
-import profile from "../utils.js/profile2.jpg";
+import profile from "../utils.js/profile5.jpg";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import CasesOutlinedIcon from "@mui/icons-material/CasesOutlined";
@@ -28,7 +28,7 @@ const About = ({ setActiveSection }) => {
           setActiveSection("about");
         }
       },
-      { threshold: 0.5 } // 50% of the section needs to be visible
+      { threshold: 0.5 }, // 50% of the section needs to be visible
     );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -89,7 +89,7 @@ const About = ({ setActiveSection }) => {
                 <CasesOutlinedIcon />
               </span>
               <span className="text-sm md:text-base font-bold">Completed</span>
-              <span className="text-xs md:text-sm font-light">4+ projects</span>
+              <span className="text-xs md:text-sm font-light">5+ projects</span>
             </div>
             <a href="https://leetcode.com/u/Tusharr_Rajput/" target="_blank">
               <div className="w-24 md:w-36 h-24 md:h-28 p-2 flex flex-col justify-center items-center border border-gray-300 rounded-lg shadow-md hover:shadow-lg dark:border-gray-600 cursor-pointer">
@@ -98,22 +98,24 @@ const About = ({ setActiveSection }) => {
                 </span>
                 <span className="text-sm md:text-base font-bold">Leetcode</span>
                 <span className="text-xs md:text-sm font-light">
-                  300+ problems
+                  400+ problems
                 </span>
               </div>
             </a>
           </div>
 
           <div className="text-sm text-gray-600 font-semibold py-5 dark:text-gray-500">
-            I'm Tushar, a 4th-year B.Tech CSE student and a Full Stack Developer
-            with a strong focus on frontend technologies and a budding passion
-            for backend development. Proficient in React and Tailwind CSS, I
-            specialize in crafting responsive, dynamic, and visually engaging
-            web applications. Currently, I'm exploring Node.js, Express.js, and
-            MongoDB to broaden my expertise in backend technologies.
+            I'm Tushar, a B.Tech CSE student and a Full Stack Developer with
+            strong expertise in both frontend and backend technologies.
+            Proficient in React and Tailwind CSS, I build responsive, dynamic,
+            and visually engaging web applications with clean architecture and
+            optimized performance. I also work confidently with Node.js,
+            Express.js, MongoDB, and REST APIs, developing scalable backend
+            systems and integrating AI-powered features into modern web
+            applications.
           </div>
 
-          <a href="/cvResume.pdf" download="Tushar_Rajput_CV.pdf">
+          <a href="/CVLatestTushar.pdf" download="Tushar_Rajput_CV.pdf">
             <div className="bg-[#404040] text-white text-lg mx-auto mt-2 md:mt-5 w-fit rounded-lg cursor-pointer hover:shadow-lg dark:bg-gradient-to-r  dark:from-[#56B4AC] dark:to-[#7728a4] dark:text-white dark:animate-gradient">
               <div className="px-3 py-2 flex justify-center items-center hover:scale-[90%] transition-all duration-150 ease-in-out">
                 Download CV

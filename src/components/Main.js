@@ -6,6 +6,7 @@ import Hobbies from "./Hobbies";
 import Home from "./Home";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import Experience from "./Experience";
 import { useState } from "react";
 
 const Main = () => {
@@ -19,6 +20,7 @@ const Main = () => {
       {/* <div className="h-[0.3px] w-[95vw] mx-auto bg-[#a34b74]"></div> */}
       <About setActiveSection={setActiveSection} />
       <Projects setActiveSection={setActiveSection} />
+      <Experience setActiveSection={setActiveSection} />
       <Skills setActiveSection={setActiveSection} />
       <Hobbies setActiveSection={setActiveSection} />
       <Contact setActiveSection={setActiveSection} />

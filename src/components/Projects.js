@@ -3,6 +3,7 @@ import BITEXPRESS_SS from "../utils.js/biteXpressSS.png";
 import RPS_SS from "../utils.js/rps.png";
 import PL_SS from "../utils.js/PL_SS.png";
 import PORTFOLIO_SS from "../utils.js/portfolioSS.png";
+import AI_DOC_ASSISTANT_SS from "../utils.js/aiDocAssistantSS.png";
 
 import ProjectCard from "./ProjectCard";
 import { useEffect, useRef, useState } from "react";
@@ -38,7 +39,7 @@ const Projects = ({ setActiveSection }) => {
           setActiveSection("projects");
         }
       },
-      { threshold: 0.5 } // 50% of the section needs to be visible
+      { threshold: 0.5 }, // 50% of the section needs to be visible
     );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -79,6 +80,16 @@ const Projects = ({ setActiveSection }) => {
           overview2="Netflix Gemini is a Netflix clone app developed using React.js, seamlessly integrating TMDB APIs to provide a rich catalog of movies and TV shows. Netflix Gemini uses Google Firebase to ensure secure and reliable user authentication and authorization. It also uses Firebase Firestore as a database. It provides enhanced user experience by features such as the ability to save movies to a watch later list and track liked movies. It uses Gemini APIs for movies and TV shows search functionality and recommended movies based on user's watchList. Netflix Gemini provides a responsive design using Tailwind CSS."
           launch="https://netflix-gemini-eight.vercel.app/"
         />
+
+        <ProjectCard
+          name="AI Doc Assistant"
+          screenshot={AI_DOC_ASSISTANT_SS}
+          overview="AI Doc Assistant is a modern full stack AI powered document assistant"
+          tech="LangChain | Multer | Node.js | Express.js | Pinecone | React.js | Tailwind CSS | Open AI APIs | Anthropic APIs"
+          overview2="AI-Doc-Assistant is a full-stack AI-powered document assistant that enables users to upload documents and perform semantic search-based question answering. It leverages LangChain for intelligent document chunking and uses OpenAI APIs to generate vector embeddings, which are stored in a Pinecone index to implement a Retrieval-Augmented Generation (RAG) pipeline. The application features a chat-based UI built with React, allowing users to query their uploaded documents and receive structured, AI-generated responses in real time."
+          launch="https://ai-doc-assistant-umber.vercel.app/"
+        />
+
         <ProjectCard
           name="BiteXpress"
           screenshot={BITEXPRESS_SS}

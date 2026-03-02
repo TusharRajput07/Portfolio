@@ -2,7 +2,7 @@ import { IconButton } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import profile from "../utils.js/profile1.jpg";
+import profile from "../utils.js/profile3.jpg";
 import SendIcon from "@mui/icons-material/Send";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import { useEffect, useRef } from "react";
@@ -27,7 +27,7 @@ const Home = ({ setActiveSection }) => {
           setActiveSection("home");
         }
       },
-      { threshold: 0.5 } // 50% of the section needs to be visible
+      { threshold: 0.5 }, // 50% of the section needs to be visible
     );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);

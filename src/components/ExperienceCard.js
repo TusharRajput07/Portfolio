@@ -1,6 +1,7 @@
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import DialogMedia from "./DialogMedia";
 import { useState } from "react";
+import DialogExperience from "./DialogExperience";
 
 const ExperienceCard = ({
   name,
@@ -42,7 +43,7 @@ const ExperienceCard = ({
         </div>
       </div>
 
-      <DialogMedia
+      <DialogExperience
         open={openDialog}
         handleClose={handleCloseDialog}
         name={name}

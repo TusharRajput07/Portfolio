@@ -73,9 +73,9 @@ const Home = ({ setActiveSection }) => {
           </div>
           <div className="mb-4 md:my-4">Full stack developer</div>
           <div className="text-sm font-light dark:text-gray-400">
-            A Full Stack Developer with a strong focus on UI development,
-            skilled in both front-end and back-end technologies, creating
-            visually appealing and user-friendly interfaces.
+            A Full Stack Developer, skilled in both front-end and back-end
+            technologies, creating visually appealing and user-friendly
+            interfaces.
           </div>
           <div
             onClick={scrollToContact}

@@ -30,13 +30,13 @@ const Header = ({ activeSection }) => {
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex mx-auto md:mx-0 items-center space-x-3 md:space-x-8 text-xs md:text-sm font-bold">
+        <nav className="flex mx-auto md:mx-0 items-center space-x-2 md:space-x-8 text-xs md:text-sm font-bold">
           <div
             className={`hover:text-black py-2 border-b-[6px] ${
               activeSection === "home"
                 ? "border-[#56B4AC]"
                 : "border-transparent"
-            } cursor-pointer transition-all duration-300 ease-in-out dark:hover:text-white`}
+            } cursor-pointer transition-all duration-300 ease-in-out dark:hover:text-white hidden md:block`}
             onClick={() => scrollToSection("home")}
           >
             Home
@@ -60,6 +60,16 @@ const Header = ({ activeSection }) => {
             onClick={() => scrollToSection("projects")}
           >
             Projects
+          </div>
+          <div
+            className={`hover:text-black py-2 border-b-[6px] ${
+              activeSection === "experience"
+                ? "border-[#56B4AC]"
+                : "border-transparent"
+            } cursor-pointer transition-all duration-300 ease-in-out dark:hover:text-white`}
+            onClick={() => scrollToSection("experience")}
+          >
+            Experience
           </div>
           <div
             className={`hover:text-black py-2 border-b-[6px] ${

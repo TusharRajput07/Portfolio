@@ -3,6 +3,7 @@ import BITEXPRESS_SS from "../utils.js/biteXpressSS.png";
 import RPS_SS from "../utils.js/rps.png";
 import PL_SS from "../utils.js/PL_SS.png";
 import PORTFOLIO_SS from "../utils.js/portfolioSS.png";
+import DEVTINDER_SS from "../utils.js/devTinderSS.png";
 import AI_DOC_ASSISTANT_SS from "../utils.js/aiDocAssistantSS.png";
 
 import ProjectCard from "./ProjectCard";
@@ -73,6 +74,15 @@ const Projects = ({ setActiveSection }) => {
       >
         {/* cards */}
         <ProjectCard
+          name="DevTinder"
+          screenshot={DEVTINDER_SS}
+          overview="DevTinder is a full-stack networking platform to discover and connect with like-minded developers."
+          tech="React.js | Node.js | Express.js | MongoDB | Redux Toolkit | Socket.io | Tailwind CSS | Firebase Storage | Groq AI | JWT Auth"
+          overview2="DevTinder is a full-stack developer networking platform inspired by Tinder, built using React.js and Node.js. DevTinder allows developers to discover and connect with like-minded collaborators based on skills, tech stack, and interests through a swipe-based feed. It uses JWT-based authentication with secure httpOnly cookies for reliable session management. DevTinder features real-time one-on-one chat powered by Socket.io with unread message tracking and last message previews. It integrates Groq AI (LLaMA 3.3 70B) to generate personalized developer bios and context-aware icebreaker suggestions for matches. DevTinder uses MongoDB as the database and Firebase Storage for profile photo management. It provides a responsive design using Tailwind CSS."
+          launch="https://dev-tinder-pied.vercel.app/"
+        />
+
+        <ProjectCard
           name="Netflix Gemini"
           screenshot={NETFLIX_SS}
           overview="Netflix Gemini is a Netflix clone with Gemini Ai features for search and movie recommendations"
@@ -84,10 +94,18 @@ const Projects = ({ setActiveSection }) => {
         <ProjectCard
           name="AI Doc Assistant"
           screenshot={AI_DOC_ASSISTANT_SS}
-          overview="AI Doc Assistant is a modern full stack AI powered document assistant"
+          overview="AI Doc Assistant is a modern full stack AI powered document assistant to upload and examine documents"
           tech="LangChain | Multer | Node.js | Express.js | Pinecone | React.js | Tailwind CSS | Open AI APIs | Anthropic APIs"
           overview2="AI-Doc-Assistant is a full-stack AI-powered document assistant that enables users to upload documents and perform semantic search-based question answering. It leverages LangChain for intelligent document chunking and uses OpenAI APIs to generate vector embeddings, which are stored in a Pinecone index to implement a Retrieval-Augmented Generation (RAG) pipeline. The application features a chat-based UI built with React, allowing users to query their uploaded documents and receive structured, AI-generated responses in real time."
           launch="https://ai-doc-assistant-umber.vercel.app/"
+        />
+
+        <ProjectCard
+          name="Portfolio"
+          screenshot={PORTFOLIO_SS}
+          overview="This very portfolio. Minimalistic design developed using React and Tailwind."
+          tech="React.js | Tailwind CSS | EmailJS"
+          overview2="This portfolio showcases a minimalistic and modern design, developed using React for dynamic functionality and Tailwind CSS for efficient, responsive styling. The focus is on simplicity and elegance, with key sections like About, Projects, Skills, and Contact highlighted through clean layouts. Subtle animations and transitions enhance navigation and interactivity, while dark mode support ensures a seamless user experience across devices. The design emphasizes usability and accessibility, reflecting both technical expertise and aesthetic considerations."
         />
 
         <ProjectCard
@@ -100,13 +118,7 @@ const Projects = ({ setActiveSection }) => {
           }
           launch="https://bite-xpress.vercel.app/"
         />
-        <ProjectCard
-          name="Portfolio"
-          screenshot={PORTFOLIO_SS}
-          overview="This very portfolio. Minimalistic design developed using React and Tailwind."
-          tech="React.js | Tailwind CSS | EmailJS"
-          overview2="This portfolio showcases a minimalistic and modern design, developed using React for dynamic functionality and Tailwind CSS for efficient, responsive styling. The focus is on simplicity and elegance, with key sections like About, Projects, Skills, and Contact highlighted through clean layouts. Subtle animations and transitions enhance navigation and interactivity, while dark mode support ensures a seamless user experience across devices. The design emphasizes usability and accessibility, reflecting both technical expertise and aesthetic considerations."
-        />
+
         <ProjectCard
           name="Rock Paper Scissors"
           screenshot={RPS_SS}

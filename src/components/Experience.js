@@ -75,7 +75,7 @@ const Experience = ({ setActiveSection }) => {
           overview="Scholar Trainee"
           duration="June 2025 - December 2025"
           location="Noida, India"
-          overview2="Trained in Python programming with libraries such as NumPy, Pandas, and Matplotlib for data analysis and visualization. Worked on a capstone project simulating real-world data analysis, where I implemented data preprocessing, exploratory data analysis (EDA), and visualizations to derive insights from large datasets. Collaborated with peers in coding exercises and problem-solving sessions, enhancing teamwork and debugging skills. Built a strong foundation in Python programming, data handling, and analytical problem-solving to prepare for project assignments in the IT industry."
+          overview2="Trained in MERN stack development, working with MongoDB, Express.js, React.js, and Node.js, along with integrating AI APIs for intelligent features. Developed a capstone project simulating real-world scenarios, implementing RESTful APIs, dynamic frontend interfaces, database integration, and AI-powered functionalities. Collaborated with peers in coding exercises and project-based learning, improving teamwork, debugging, and problem-solving skills. Built a strong foundation in full-stack development, API design, scalable application architecture, and AI-driven solution development for real-world deployment"
         />
       </div>
     </div>

@@ -130,7 +130,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center text-sm font-light py-5">
-        © 2024 Tushar Rajput. All rights reserved.
+        © 2026 Tushar Rajput. All rights reserved.
       </div>
     </div>
   );
